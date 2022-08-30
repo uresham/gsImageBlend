@@ -1,0 +1,36 @@
+{
+  "name": "gs-image-blend",
+  "version": "1.0.0",
+  "description": "Gapstars -Technical Assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "APP=test jest --testTimeout=50000 --runInBand",
+    "test-coverage": "APP=test jest --testTimeout=50000 --runInBand --coverage",
+    "start-old": "node old.js",
+    "start-new": "node new.js"
+  },
+  "author": "Uresha",
+  "license": "ISC",
+  "dependencies": {
+    "@mapbox/blend": "^2.0.1",
+    "dotenv": "^11.0.0",
+    "minimist": "^1.2.5",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "jest": "^29.0.1"
+  },
+  "jest": {
+    "coverageReporters": [
+      "text",
+      "html"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/config/",
+      "/images/",
+      "/old.js"
+    ],
+    "coverageDirectory": "./test/coverage"
+  }
+}
